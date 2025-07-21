@@ -11,11 +11,7 @@ spec:
     path: dev
   destination: 
     server: http://10.10.10.93:6443
-    namespace: web-api
+    namespace: myapp
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true

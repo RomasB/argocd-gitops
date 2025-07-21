@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-api
+  name: myapp-deployment
 spec:
   selector:
     matchLabels:
-      app: web-api
+      app: myapp
   replicas: 2
   template:
     metadata:
       labels:
-        app: web-api
+        app: myapp
     spec:
       containers:
-      - name: web-api
+      - name: myapp
         image: romanas/web-api:1.0
         ports:
-        - containerPort: 8080
+        - containerPort: 8085
