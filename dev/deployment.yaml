@@ -16,4 +16,4 @@ spec:
       - name: myapp
         image: romanas/web-api:3.0
         ports:
-        - containerPort: 8085
+        - containerPort: 7209
