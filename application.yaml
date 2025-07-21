@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     path: dev
   destination: 
-    server: http://10.10.10.93:6443
+    server: https://kubernetes.default.svc
     namespace: myapp
   syncPolicy:
     syncOptions:
