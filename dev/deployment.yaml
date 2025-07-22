@@ -5,15 +5,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: my-app
   replicas: 2
   template:
     metadata:
       labels:
-        app: myapp
+        app: my-app
     spec:
       containers:
-      - name: myapp
-        image: romanas/web-api:3.0
+      - name: my-app
+        image: romanas/web-api:4.0
         ports:
         - containerPort: 7209

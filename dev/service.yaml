@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-service
+  name: my-app-service
 spec:
   selector:
-    app: myapp
+    run: my-app
   ports:
   - port: 7209
     protocol: TCP
-    targetPort: 7209
+    targetPort: 8585
