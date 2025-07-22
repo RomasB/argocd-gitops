@@ -16,4 +16,8 @@ spec:
       - name: my-web-api
         image: romanas/web-api:6.0
         ports:
-        - containerPort: 80
+          - containerPort: 80
+            name: http-web-api
+        env:
+          - name: ASPNETCORE_URLS
+            value: http://+:80
