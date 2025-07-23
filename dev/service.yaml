@@ -13,5 +13,3 @@ spec:
     protocol: TCP
     targetPort: 80
     nodePort: 30009
-  externalIPs:
-    - 10.10.10.93
