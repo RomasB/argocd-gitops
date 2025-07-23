@@ -7,9 +7,11 @@ metadata:
 spec:
   selector:
     run: my-web-api
-  type: NodePort    
+  type: LoadBalancer    
   ports:
   - port: 8089
     protocol: TCP
     targetPort: 80
     nodePort: 30009
+  externalIPs:
+    - 10.10.10.93
