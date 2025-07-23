@@ -12,6 +12,6 @@ spec:
   - port: 8089
     protocol: TCP
     targetPort: 80
-    nodePort: 30009
+    nodePort: 30010
   externalIPs:
     - 10.10.10.93
