@@ -9,7 +9,8 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: my-web-api
-          port:
-            number: 80
+          service:
+            name: my-web-api
+            port:
+              number: 80
         pathType: Prefix
