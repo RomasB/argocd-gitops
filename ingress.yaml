@@ -3,17 +3,16 @@ kind: Ingress
 metadata:
   name: webapi-routing
   namespace: mywebapi
-  annotations:
-      nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
+  ingressClassName: nginx
   rules:
   - host: webapi-test.skuba.eu
     http:
       paths:
-        - backend:
+        - path: /
+          pathType: Prefix      
+          backend:
             service:
               name: my-web-api
               port:
                 number: 80
-          path: /
-          pathType: ImplementationSpecific
