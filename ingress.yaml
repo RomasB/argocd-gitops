@@ -11,8 +11,8 @@ spec:
     http:
       paths:
         - backend:
-          service:
-            name: my-web-api
-            port:
-              number: 8089
+            service:
+              name: my-web-api
+              port:
+                number: 8089
           pathType: Prefix
