@@ -13,4 +13,3 @@ spec:
             name: my-web-api
             port:
               number: 80
-        pathType: Prefix
