@@ -15,8 +15,3 @@ spec:
             name: my-web-api
             port:
               number: 8089
-    defaultBackend:
-      service:
-        name: my-web-api
-        port:
-          number: 8089
