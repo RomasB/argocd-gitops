@@ -1,15 +1,13 @@
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: webapi-routing
   namespace: my-web-api
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
   - host: webapi-test.skuba.eu
     http:
       paths:
       - backend:
-        serviceName: my-web-api
-        servicePort: 8089
+          serviceName: my-web-api
+          servicePort: 8089
