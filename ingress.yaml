@@ -10,10 +10,9 @@ spec:
   - host: webapi-test.skuba.eu
     http:
       paths:
-      - path: /
-        pathType: Prefix
-        backend:
+        - backend:
           service:
             name: my-web-api
             port:
               number: 8089
+          pathType: Prefix
