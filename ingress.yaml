@@ -13,6 +13,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: service/my-web-api
+              name: my-web-api
               port:
                 number: 80
