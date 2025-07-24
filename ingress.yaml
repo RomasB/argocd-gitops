@@ -15,4 +15,5 @@ spec:
               name: my-web-api
               port:
                 number: 8089
-          pathType: Prefix
+          path: /
+          pathType: ImplementationSpecific
