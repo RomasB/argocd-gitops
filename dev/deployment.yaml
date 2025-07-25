@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-web-api
+  name: web-api-app
 spec:
   selector:
     matchLabels:
-      run: my-web-api
+      run: web-api-app
   replicas: 2
   template:
     metadata:
       labels:
-        run: my-web-api
+        run: web-api-app
     spec:
       containers:
-      - name: my-web-api
-        image: romanas/web-api:1.1.1525
+      - name: web-api-app
+        image: romanas/web-api-app:1.1.1525
         ports:
           - containerPort: 80
-            name: http-web-api
+            name: http-web-api-app
         env:
           - name: ASPNETCORE_URLS
             value: http://+:80

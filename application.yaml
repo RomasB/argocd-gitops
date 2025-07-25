@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-web-api-argo-application
+  name: web-api-argo-app
   namespace: argocd
 spec:
   project: default
@@ -11,7 +11,7 @@ spec:
     path: dev
   destination: 
     server: https://kubernetes.default.svc
-    namespace: mywebapi
+    namespace: web-api
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
