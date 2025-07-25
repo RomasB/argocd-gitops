@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-web-api
-        image: romanas/web-api:10
+        image: romanas/web-api:11
         ports:
           - containerPort: 80
             name: http-web-api
