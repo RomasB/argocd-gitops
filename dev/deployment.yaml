@@ -17,7 +17,7 @@ spec:
         image: romanas/web-api-app:1.1.1525
         ports:
           - containerPort: 80
-            name: http-web-api-app
+            name: http-web-api
         env:
           - name: ASPNETCORE_URLS
             value: http://+:80
