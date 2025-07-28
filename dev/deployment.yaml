@@ -21,7 +21,7 @@ spec:
         env:
           - name: ASPNETCORE_URLS
             value: http://+:80
-        hostAliases:
-          - hostnames:
-            - "AppsSrv"
-            ip: "10.10.10.122"
+      hostAliases:
+      - hostnames:
+        - "AppsSrv"
+        ip: "10.10.10.122"
