@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: web-api-argo-app
+  name: dev-mq-listener-argo-app
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/RomasB/argocd-gitops.git
     targetRevision: HEAD
-    path: dev/web-api
+    path: dev/listener-app
   destination: 
     server: https://kubernetes.default.svc
-    namespace: web-api
+    namespace: mq-listener-app
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

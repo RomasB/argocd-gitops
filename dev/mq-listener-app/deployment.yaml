@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: listener-app
+  name: mq-listener-app
 spec:
   selector:
     matchLabels:
-      run: listener-app
+      run: mq-listener-app
   replicas: 1
   template:
     metadata:
       labels:
-        run: listener-app
+        run: mq-listener-app
     spec:
       containers:
-      - name: listener-app
-        image: romanas/listener-app:1.1.1675
+      - name: mq-listener-app
+        image: romanas/mq-listener-app:1.1.1675
