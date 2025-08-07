@@ -1,23 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-api-app
+  name: data-sync-app
 spec:
   selector:
     matchLabels:
-      run: web-api-app
+      run: data-sync-app
   replicas: 2
   template:
     metadata:
       labels:
-        run: web-api-app
+        run: data-sync-app
     spec:
       containers:
-      - name: web-api-app
-        image: romanas/web-api-app:1.1.1675
-        ports:
-          - containerPort: 80
-            name: http-web-api
-        env:
-          - name: ASPNETCORE_URLS
-            value: http://+:80
+      - name: data-sync-app
+        image: romanas/data-sync-app:1.1.1675

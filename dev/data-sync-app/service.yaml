@@ -1,13 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: web-api-app
+  name: data-sync-app
   labels:
-    run: web-api-app
+    run: data-sync-app
 spec:
   selector:
-    run: web-api-app
-  ports:
-  - port: 80
-    targetPort: 80
-    protocol: TCP
+    run: data-sync-app

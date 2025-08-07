@@ -1,23 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-api-app
+  name: listener-app
 spec:
   selector:
     matchLabels:
-      run: web-api-app
-  replicas: 2
+      run: listener-app
+  replicas: 1
   template:
     metadata:
       labels:
-        run: web-api-app
+        run: listener-app
     spec:
       containers:
-      - name: web-api-app
-        image: romanas/web-api-app:1.1.1675
-        ports:
-          - containerPort: 80
-            name: http-web-api
-        env:
-          - name: ASPNETCORE_URLS
-            value: http://+:80
+      - name: listener-app
+        image: romanas/listener-app:1.1.1675
