@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: web-api-routing
-  namespace: web-api
+  namespace: web-api-app
 spec:
   ingressClassName: nginx
   rules:
