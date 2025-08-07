@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       run: data-sync-app
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
