@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: data-sync-app
-        image: romanas/data-sync-app:1.1.1688
+        image: romanas/data-sync-app:1.1.1692
