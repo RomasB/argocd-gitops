@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/RomasB/argocd-gitops.git
     targetRevision: HEAD
-    path: dev/listener-app
+    path: dev/mq-listener-app
   destination: 
     server: https://kubernetes.default.svc
     namespace: mq-listener-app
