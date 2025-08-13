@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: web-api-routing
   namespace: web-api-app
+  labels:
+    run: web-api-app  
 spec:
   ingressClassName: nginx
   rules:
