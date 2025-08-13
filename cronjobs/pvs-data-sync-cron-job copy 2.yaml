@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: pvs-data-sync-cron-job
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: pvs-data-sync
+            image: romanas/data-sync-app:1.1.1751
+            imagePullPolicy: IfNotPresent
+            command: [ "dotnet", "Skuba.DataSync.App.dll", "PvsDataSyncJob" ]
+          restartPolicy: OnFailure
