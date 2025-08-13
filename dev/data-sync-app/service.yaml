@@ -1,9 +1,30 @@
-apiVersion: v1
-kind: Service
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: global-data-sync-cron-job
 metadata:
   name: data-sync-app
   labels:
     run: data-sync-app
 spec:
-  selector:
-    run: data-sync-app
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: global-data-sync
+            image: romanas/data-sync-app:1.1.1751
+            imagePullPolicy: IfNotPresent
+            command: [ "dotnet", "Skuba.DataSync.App.dll", "GlobalDataSyncJob" ]
+          restartPolicy: OnFailure
+
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: data-sync-app
+#  labels:
+#    run: data-sync-app
+#spec:
+#  selector:
+#    run: data-sync-app
