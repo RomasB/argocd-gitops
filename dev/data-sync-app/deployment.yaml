@@ -6,12 +6,3 @@ spec:
   selector:
     matchLabels:
       run: data-sync-app
-#  replicas: 1
-#  template:
-#    metadata:
-#      labels:
-#        run: data-sync-app
-#    spec:
-#      containers:
-#      - name: data-sync-app
-#        image: romanas/data-sync-app:1.1.1751
