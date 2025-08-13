@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: global-data-sync-cron-job
 metadata:
-  name: data-sync-app
+  name: global-data-sync-cron-job
   labels:
     run: data-sync-app
 spec:
@@ -13,7 +13,7 @@ spec:
       template:
         spec:
           containers:
-          - name: global-data-sync
+          - name: global-data-sync-job
             image: romanas/data-sync-app:1.1.1751
             imagePullPolicy: IfNotPresent
             command: [ "dotnet", "Skuba.DataSync.App.dll", "GlobalDataSyncJob" ]
