@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: calculations-data-sync-cron-job
 spec:
-  schedule: "* */1 * * *"
+  schedule: "30 * * * *"
   jobTemplate:
     spec:
       template:
