@@ -2,8 +2,6 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: master-data-sync-cron-job
-  labels:
-    run: data-sync-app
 spec:
   schedule: "* */1 * * *"
   jobTemplate:
