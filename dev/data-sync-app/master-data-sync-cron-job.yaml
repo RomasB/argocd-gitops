@@ -5,7 +5,7 @@ metadata:
   labels:
     run: data-sync-app
 spec:
-  schedule: "*/1 * * * *"
+  schedule: "* */1 * * *"
   jobTemplate:
     spec:
       template:
