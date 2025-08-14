@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: web-api-app
   labels:
-    run: web-api-app
+    app: web-api-app
 spec:
   selector:
-    run: web-api-app
+    app: web-api-app
   ports:
   - port: 80
     targetPort: 80

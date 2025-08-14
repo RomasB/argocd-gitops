@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      run: web-api-app
+      app: web-api-app
   replicas: 2
   template:
     metadata:
       labels:
-        run: web-api-app
+        app: web-api-app
     spec:
       containers:
       - name: web-api-app

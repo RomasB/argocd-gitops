@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      run: mq-listener-app
+      app: mq-listener-app
   replicas: 2
   template:
     metadata:
       labels:
-        run: mq-listener-app
+        app: mq-listener-app
     spec:
       containers:
       - name: mq-listener-app
