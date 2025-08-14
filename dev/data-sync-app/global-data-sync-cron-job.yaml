@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
           - name: global-data-sync
-            image: romanas/data-sync-app:1.1.1753
+            image: romanas/data-sync-app:1.1.1758
             imagePullPolicy: IfNotPresent
             command: [ "dotnet", "Skuba.DataSync.App.dll", "GlobalDataSyncJob" ]
           restartPolicy: OnFailure
