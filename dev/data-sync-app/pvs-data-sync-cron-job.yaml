@@ -12,7 +12,7 @@ spec:
         spec:
           containers:
           - name: pvs-data-sync
-            image: romanas/data-sync-app:1.1.1751
+            image: romanas/data-sync-app:1.1.1753
             imagePullPolicy: IfNotPresent
             command: [ "dotnet", "Skuba.DataSync.App.dll", "PvsDataSyncJob" ]
           restartPolicy: OnFailure
