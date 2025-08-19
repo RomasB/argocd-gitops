@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
           - name: master-data-sync
-            image: romanas/data-sync-app:1.1.1769
+            image: romanas/data-sync-app:1.1.1776
             imagePullPolicy: IfNotPresent
             command: [ "dotnet", "Skuba.DataSync.App.dll", "MasterDataSyncJob" ]
           restartPolicy: OnFailure
